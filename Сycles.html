@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сycles</title>
+</head>
+<body>
+    <script type="text/javascript">
+        for(var i = 0; i < 10; i++){
+            if(i %3 == 0 && i !=0) continue;
+            if (i == 8) break;
+            document.write(i + " for </br> ");
+        }
+        var x = 0;
+
+        while (x < 10){
+            document.write(x + " while </br> ");
+            x += 2;
+        }
+
+        var y = 1000;
+        do {
+            document.write("Cycle completed </br> ");
+        } while(y < 100);
+    </script>
+</body>
+</html>
