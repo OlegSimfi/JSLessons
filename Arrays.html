@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script type="text/javascript">
+    var arr = new Array("str", 7, 1.23, true);
+    document.write(arr[1] + "<br />" + arr[3]);
+    document.write("<br />" + arr.length);
+    document.write("<br />");
+    for(var i = 0; i < arr.length; i++){
+        document.write(arr[i] + "<br />" );
+    }
+    arr = new Array();
+    for (i = 0; i < 10; i++) {
+        arr[i] = i *3;
+        document.write(arr[i] + "<br />" );
+    }
+    var sum =0;
+    for (i = 0; i < arr.length; i++ )
+        sum += arr[i];
+    document.write("Amount =" + sum);
+</script>
+</body>
+</html>`
