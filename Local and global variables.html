@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local and global variables</title>
+</head>
+<body>
+<script type="text/javascript">
+    var global = 11;
+    var i = 10;
+
+    function test () {
+        global ++;
+        var i = 5;
+    }
+    test();
+    document.write("Global - " + global, "variable i - " + i);
+
+</script>
+</body>
+</html>
