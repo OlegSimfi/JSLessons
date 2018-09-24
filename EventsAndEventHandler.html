@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events and event handler</title>
+    <script type="text/javascript">
+        function buttonClick (button) {
+            alert ("You click on the Button. Button name = " + button.name + " "+ "Button value = " + button.value);
+        }
+        let counter = 0;
+        function OnMouseCounter(element) {
+            counter ++;
+            element.innerHTML = "Pointed "+ counter +"  times"
+        }
+    </script>
+</head>
+<body onload="alert('Page loaded')">
+    <input type="button" name="Default button" value="Click me" onclick="buttonClick(this)"/>
+    <span onmouseover="OnMouseCounter (this)">Pointed 0 times</span>
+</body>
+</html>
