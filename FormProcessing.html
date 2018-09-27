@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form processing</title>
+    <script type="text/javascript">
+        function valid (form) {
+            let fail = false;
+            let name = form.name.value;
+            let email = form.email.value;
+            let password = form.password.value;
+            let RePassword = form.RePassword.value;
+            let state = form.state.value;
+            const  adr_pattern = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,5}/i;
+
+
+            if (name == "" || name ==" ")
+                fail = "You did not enter your name";
+            else if (adr_pattern.test(email) == false)
+                fail = "You entered an incorrect Email";
+            else if (password == "")
+                fail = "You did not enter a password";
+            else if (password != RePassword)
+                fail = "Passwords do not match";
+            else if (state =="")
+                fail = "Please select a gender";
+            if (fail)
+                alert(fail);
+            else
+                window.location = "https://www.google.com/"
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="test" id="form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Name" id="name" /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" placeholder="Email" id="email" /><br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Password" id="password" /><br /><br />
+        <label for="RePassword">Confirm password :</label>
+        <input type="password" name="RePassword" placeholder="Confirm password" id="RePassword" /><br /><br />
+        <span>Gender:</span>
+        <input type="radio" name="state" id="male" value="Male"  />
+        <label for="male">Male</label>
+        <input type="radio" name="state" id="female" value="Female" />
+        <label for="female">Female</label><br /><br />
+        <input type="button" name="submit" onclick="valid(document.getElementById('form'))" value="Submit">
+    </form>
+</body>
+</html>
