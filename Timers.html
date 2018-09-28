@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+    <script>
+        // const id = setInterval("myFunct_1()", 1000);
+        let counter = 0;
+
+        // function myFunct_1() {
+        //     counter ++;
+        //     alert("Seconds passed - " + counter);
+        //     if (counter == 3) clearInterval(id);
+        // }
+        function timer() {
+            counter ++;
+            document.getElementById("count").innerHTML = counter;
+            setTimeout("timer()", 1000);
+        }
+    </script>
+</head>
+<body onload="timer()">
+    Seconds passed <span id="count"> -1</span>
+</body>
+</html>
